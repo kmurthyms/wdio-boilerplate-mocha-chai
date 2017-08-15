@@ -1,0 +1,36 @@
+{
+  "name": "webdriverio-boilerplate-mocha-chai-docker-jenkins",
+  "version": "1.0",
+  "description": "boilerplate framework for e2e testing using node and webdriverio",
+  "main": "wdio.conf.js",
+  "dependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-plugin-transform-runtime": "^6.15.0",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-register": "^6.18.0",
+    "babel-runtime": "^6.18.0",
+    "chai": "3.5.0",
+    "mocha": "2.4.4",
+    "node-resemble-js": "0.0.5",
+    "selenium-standalone": "^5.9.0",
+    "wdio-allure-reporter": "^0.1.2",
+    "wdio-chromedriver-service": "^0.1.0",
+    "wdio-junit-reporter": "^0.3.0",
+    "wdio-mocha-framework": "^0.2.11",
+    "wdio-screenshot": "^0.1.1",
+    "wdio-selenium-standalone-service": "0.0.7",
+    "webdriverio": "^4.4.0"
+  },
+  "scripts": {
+    "test": "npm run testremote && npm run testcssremote",
+    "start": "node_modules/.bin/wdio test/config/wdio.conf.js",
+    "testcss": "node_modules/.bin/wdio test/config/wdio.visual.js",
+    "testremote": "node_modules/.bin/wdio test/config/wdio.conf.js --remote=true",
+    "testcssremote": "node_modules/.bin/wdio test/config/wdio.conf.js --remote=true"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kmurthyms/wdio-boilerplate-mocha-chai.git"
+  },
+  "author": "Krishnamurthy M S",
+}
